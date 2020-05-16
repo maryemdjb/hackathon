@@ -50,9 +50,9 @@
 }
 
 body {
-  color: #777777;
+  color: #FFF;
   font-family: "Poppins", sans-serif;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 300;
   line-height: 1.625em;
   position: relative;
@@ -119,7 +119,7 @@ a, a:focus, a:hover {
 h1, h2, h3,
 h4, h5, h6 {
   font-family: "Poppins", sans-serif;
-  color: #222222;
+  color: #F3F3F3;
   line-height: 1.2em !important;
   margin-bottom: 0;
   margin-top: 0;
@@ -2176,7 +2176,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .section-gap {
-  padding: 120px 0;
+  padding: 100px 0;
 }
 
 .footer-gap {
@@ -2275,6 +2275,11 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-size: cover;
 }
 
+.login-area {
+  background: url(../img/velo.jpg) center;
+  background-size:cover ;
+}
+
 .banner-area .overlay-bg {
   background-color: rgba(0, 0, 0, 0.8);
 }
@@ -2352,6 +2357,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-color: rgba(32, 46, 69, 0.4);
   border: 1px solid #4b5263;
   padding: 50px;
+  margin-top: 50px;
+
 }
 
 @media (max-width: 413px) {
