@@ -595,11 +595,13 @@ pre code {
   margin-left: auto;
 }
 .container-car {
-  width: 800px;
+  width: 600px;
   padding-right: 15px;
   padding-left: 15px;
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
+
+
 }
 @media (min-width: 576px) {
   .container {
@@ -638,6 +640,11 @@ pre code {
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
+}
+.row-card {
+  display: flex;
+  flex-wrap: wrap;
+
 }
 
 .no-gutters {

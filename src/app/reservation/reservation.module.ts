@@ -15,7 +15,7 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
   imports: [
     CommonModule,
     ReservationRoutingModule,
-    OwlDateTimeModule, 
+    OwlDateTimeModule,
     OwlNativeDateTimeModule,
     MatStepperModule,
     MatFormFieldModule,
