@@ -8,6 +8,7 @@ import {HeaderComponent} from './shared/header/header.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AddBikeComponent } from './add-bike/add-bike.component';
+import { ReservationComponent } from './reservation/reservation.component';
 
 @NgModule({
   declarations: [
