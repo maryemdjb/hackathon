@@ -10,21 +10,21 @@
               <h2 style="color: white" class="text-center"> Connectez-vous à votre compte </h2>
               <form (ngSubmit)="login()" #form="ngForm" class=" login-form">
                 <div class="form-group">
-                  <label>Username</label>
-                  <input class="form-control " id="username" name="username" placeholder="Enter username"
+                  <label>Nom d'utilisateur</label>
+                  <input class="form-control " id="username" name="username" placeholder="Pseudo"
                          [(ngModel)]="model.username" required/>
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
+                  <label for="exampleInputPassword1">Mot de Passe</label>
                   <input type="password" class="form-control" id="exampleInputPassword1" name="password"
-                         placeholder="Password" [(ngModel)]="model.password" required/>
+                         placeholder="Mot de Passe" [(ngModel)]="model.password" required/>
                 </div>
                 <div style="display: flex;justify-content: center;">
-                  <button type="submit" class="genric-btn primary radius " [disabled]="!form.valid">Submit</button>
+                  <button type="submit" class="genric-btn primary radius " [disabled]="!form.valid">Se connecter</button>
                 </div>
                 &nbsp;
-                <h5 class="card-title login-form" style="display: flex;justify-content: center;">Don't have an account?
-                  &nbsp;<a [routerLink]="['/register']" > Register now </a>
+                <h5 class="card-title login-form" style="display: flex;justify-content: center;">vous n'avez pas encore de compte?
+                  &nbsp;<a [routerLink]="['/register']" >S'inscrire  </a>
                 </h5>
 
               </form>

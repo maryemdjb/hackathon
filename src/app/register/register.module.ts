@@ -13,7 +13,7 @@ import {RegisterService} from './register.service';
   imports: [
     CommonModule,
     HttpClientModule,
-    FormsModule, 
+    FormsModule,
     ReactiveFormsModule,
     RegisterRoutingModule,
 

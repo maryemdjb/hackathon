@@ -3520,3 +3520,4 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-size: cover;
 
 }
+@import "~ng-pick-datetime/assets/style/picker.min.css";
