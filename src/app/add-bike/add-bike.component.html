@@ -83,31 +83,16 @@
             <div class="input-group-prepend">
               <span class="input-group-text"><span class="lnr lnr-calendar-full"></span></span>
             </div>
-            <input type="text" class="form-control" id="debut" placeholder="Début Location" required>
+            <input class="form-control" [owlDateTimeTrigger]="dt10" [owlDateTime]="dt10"
+            [selectMode]="'range'" required>
+            <owl-date-time #dt10></owl-date-time>
             <div class="invalid-feedback" style="width: 100%;">
               Your starttime is required.
             </div>
           </div>
         </div>
-        <label>
-          Date Time Range From:
-          <input [owlDateTimeTrigger]="dt12" [owlDateTime]="dt12"
-                
-                 [selectMode]="'rangeFrom'">
-          <owl-date-time #dt12></owl-date-time>
-      </label>
-        <div class="mb-3">
-          <label for="fin">Fin location</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text"><span class="lnr lnr-calendar-full"></span></span>
-            </div>
-            <input type="text" class="form-control" id="fin" placeholder="Fin Location" required>
-            <div class="invalid-feedback" style="width: 100%;">
-              Your endtime is required.
-            </div>
-          </div>
-        </div>
+
+
 
         <div class="row">
           <div class="col-md-3 mb-3">
