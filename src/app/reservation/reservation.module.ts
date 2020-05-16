@@ -8,6 +8,9 @@ import {MatStepperModule} from '@angular/material/stepper';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
+import {HttpClientModule} from '@angular/common/http';
+import {ReservationService} from './reservation.service';
+
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 
 @NgModule({
@@ -20,7 +23,10 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
     MatStepperModule,
     MatFormFieldModule,
     FormsModule,
-     ReactiveFormsModule
-  ]
+     ReactiveFormsModule,
+     HttpClientModule
+  ],
+  providers: [ReservationService ]
+
 })
 export class ReservationModule { }

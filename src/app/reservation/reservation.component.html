@@ -10,21 +10,18 @@
             </button>
           </div>  
         <div class="modal-body">
-         <form action="action_page.php">
+         <form #form="ngForm"  (ngSubmit)="reserve()"  >
 
-            <label for="fname">Nom et prénom</label>
-            <input type="text" id="fname" name="firstname" placeholder="Nom et prénom">
-        
             <label for="debut">Date début</label> <br/>
-            <input id="debut" [owlDateTimeTrigger]="dt5" [owlDateTime]="dt5"
-            [selectMode]="'rangeFrom'">
+            <input id="debut" name='debut' [owlDateTimeTrigger]="dt5" [owlDateTime]="dt5"
+            [selectMode]="'rangeFrom'"   [(ngModel)]="model.debut">
             <owl-date-time #dt5></owl-date-time><br/>
 
             <label for="fin">Date fin</label> <br/>
-            <input  id="fin" [owlDateTimeTrigger]="dt12" [owlDateTime]="dt12"   
-            [selectMode]="'rangeFrom'">
+            <input name='fin' id="fin" [owlDateTimeTrigger]="dt12" [owlDateTime]="dt12"   
+            [selectMode]="'rangeFrom'"  [(ngModel)]="model.fin">
             <owl-date-time #dt12></owl-date-time><br/>  
-
+            <button type="submit"   class="btn btn-secondary">Ajouter une catégorie</button>
 
           </form> 
         
@@ -32,10 +29,11 @@
         </div>
 
         
-        <div class="modal-footer">
-          <button type="button"  class="btn btn-secondary">Ajouter une catégorie</button>
+        <!-- <div class="modal-footer">
+          <button type="button"  (ngSubmit)="reserve()" class="btn btn-secondary">Ajouter une catégorie</button>
           <button type="button"  class="btn btn-primary">Valider</button>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
+ 
