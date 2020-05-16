@@ -5,6 +5,7 @@ import { AddBikeRoutingModule } from './add-bike-routing.module';
 import {AddBikeComponent} from './add-bike.component';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 
+
 @NgModule({
   declarations: [AddBikeComponent],
   imports: [

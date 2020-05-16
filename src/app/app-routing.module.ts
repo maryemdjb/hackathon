@@ -8,7 +8,7 @@ const routes: Routes = [
   {path: 'register', loadChildren: () => import('./register/register.module').then(m => m.RegisterModule)},
   {path: 'addBike', loadChildren: () => import('./add-bike/add-bike.module').then(m => m.AddBikeModule)},
   {path: 'directory', loadChildren: () => import('./directory/directory.module').then(m => m.DirectoryModule)},
-
+  {path: 'reservation', loadChildren: () => import('./reservation/reservation.module').then(m => m.ReservationModule)},
 
 
 

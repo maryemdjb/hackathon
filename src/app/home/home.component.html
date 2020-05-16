@@ -24,26 +24,17 @@
                   </div>
               </div>
               <br>
-          <div class="form-group row">
-            <div class="col-md-6 wrap-left">
-              <div class="input-group dates-wrap">
-                <input id="datepicker" class="dates form-control" placeholder="Date Pick up" type="text">
-                <div class="input-group-prepend">
-                  <span class="input-group-text"><span class="lnr lnr-calendar-full"></span></span>
-                </div>
+              <div class="from-group">
+                <div class="input-group dates-wrap">
+                  <input class="form-control" [owlDateTimeTrigger]="dt10" [owlDateTime]="dt10"
+                  [selectMode]="'range'" placeholder="Saisir la durée de location" required>
+                  <owl-date-time #dt10></owl-date-time>
+                  <div class="input-group-prepend">
+                      <span class="input-group-text"><span class="lnr lnr-calendar-full"></span></span>
+                    </div>
+                  </div>
               </div>
-            </div>
-            <div class="col-md-6 wrap-right">
-              <div class="input-group dates-wrap">
-                <input id="datepicker2" class="dates form-control" id="exampleAmount" placeholder="Date Drop off"
-                       type="text">
-                <div class="input-group-prepend">
-                  <span class="input-group-text"><span class="lnr lnr-calendar-full"></span></span>
-                </div>
-              </div>
-            </div>
-          </div>
-
+              <br>
           <div class="form-group row">
             <div class="col-md-12">
               <button type="reset" class="btn btn-default btn-lg btn-block text-center text-uppercase">Rechercher

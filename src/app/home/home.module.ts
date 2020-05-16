@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import {HomeComponent} from './home.component';
 import {HeaderComponent} from '../shared/header/header.component';
+import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 
 
 @NgModule({
@@ -13,7 +14,9 @@ import {HeaderComponent} from '../shared/header/header.component';
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    OwlDateTimeModule,
+    OwlNativeDateTimeModule
   ]
 })
 export class HomeModule { }
