@@ -3509,3 +3509,14 @@ body.mobile-nav-active #mobile-nav-toggle {
                End Blog Details  Page style
 ################
 */
+.container {
+  max-width: 960px;
+}
+
+.lh-condensed { line-height: 1.25; }
+
+.addbikebody {
+  background: url(../img/addbikephoto.jpg) center;
+  background-size: cover;
+
+}

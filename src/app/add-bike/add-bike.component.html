@@ -1,1 +1,154 @@
-<p>add-bike works!</p>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <title>Add bike</title>
+
+<meta name="theme-color" content="#563d7c">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body class="addbikebody">
+    <div class="container" style=" padding-bottom: 10px;">
+  <div class="py-5 text-center">
+   <h2>Louez quand vous voulez, à votre prix. </h2>
+    <p class="lead">Complétez vos revenus en partageant votre vélo.</p>
+  </div>
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-4">
+        <h2> <span class="lnr lnr-license"></span> Inscrivez votre vélo </h2>
+        <p>Fournissez les informations principales.</p>
+
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <h2> <span class="lnr lnr-list"></span> Recevez des réservations</h2>
+        <p>Après une vérification d'identité, les locataires peuvent la louer pendant ses plages de disponibilité.</p>
+
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <h2> <span class="lnr lnr-thumbs-up"></span> Louez sans effort</h2>
+        <p>Premier arrivé premier servi.</p>
+
+      </div><!-- /.col-lg-4 -->
+
+    </div><!-- /.row -->
+  <div class="row">
+    <div class="col-md-12 order-md-1">
+      <h2 class="text-center" style="margin: 10px;">Inscrivez votre vélo</h2>
+      <form class="needs-validation" novalidate>
+        <div class="row">
+          <div class="col-md-12 mb-3">
+            <label for="firstName">Description</label>
+            <input type="textbox" class="form-control" id="firstName" placeholder="" value="" required>
+            <div class="invalid-feedback">
+              Valid Description is required.
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="username">Adresse</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><span class="lnr lnr-map-marker"></span></span>
+            </div>
+            <input type="text" class="form-control" id="adresse" placeholder="Adresse" required>
+            <div class="invalid-feedback" style="width: 100%;">
+              Your adresse is required.
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="debut">Debut location</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><span class="lnr lnr-calendar-full"></span></span>
+            </div>
+            <input type="text" class="form-control" id="debut" placeholder="Début Location" required>
+            <div class="invalid-feedback" style="width: 100%;">
+              Your starttime is required.
+            </div>
+          </div>
+        </div>
+
+                <div class="mb-3">
+          <label for="fin">Fin location</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><span class="lnr lnr-calendar-full"></span></span>
+            </div>
+            <input type="text" class="form-control" id="fin" placeholder="Fin Location" required>
+            <div class="invalid-feedback" style="width: 100%;">
+              Your endtime is required.
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3 mb-3">
+            <label for="country">Marque</label>
+            <select class="custom-select d-block w-100" id="country" required>
+              <option value="">Choose...</option>
+              <option>Merida Bikes</option>
+              <option>Kona Bicycles</option>
+              <option>Yeti Cycles</option>
+              <option>Marin Cycles</option>
+              <option>Cannondale</option>
+              <option>Specialized</option>
+              <option>Trek</option>
+              <option>Santa Cruz</option>
+              <option>Giant</option>
+              <option>Décathlon</option>
+            </select>
+            <div class="invalid-feedback">
+              Please select a valid country.
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="state">etat</label>
+            <select class="custom-select d-block w-100" id="state" required>
+              <option>vieux</option>
+              <option>usé</option>
+              <option>nouveau</option>
+            </select>
+            <div class="invalid-feedback">
+              Please provide a valid state.
+            </div>
+          </div>
+        </div>
+        <hr class="mb-4">
+        <div class="form-group">
+          <label for="exampleFormControlFile1">Photos:</label>
+          <input type="file" class="form-control-file" id="exampleFormControlFile1">
+        </div>
+        <hr class="mb-4">
+        <button class="btn btn-primary btn-lg btn-block text-center text-uppercase" type="submit">Continue to checkout</button>
+
+      </form>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+        <script src="form-validation.js"></script>
+      </body>
+</html>
