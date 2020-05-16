@@ -2179,6 +2179,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 120px 0;
 }
 
+.footer-gap {
+  padding: 20px 0;
+}
+
 .section-title {
   padding-bottom: 30px;
 }
@@ -2728,7 +2732,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .footer-area {
-  padding-top: 100px;
+  padding-top: 10px;
   background-color: #04091e;
 }
 
