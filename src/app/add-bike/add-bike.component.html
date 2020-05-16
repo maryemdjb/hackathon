@@ -89,8 +89,14 @@
             </div>
           </div>
         </div>
-
-                <div class="mb-3">
+        <label>
+          Date Time Range From:
+          <input [owlDateTimeTrigger]="dt12" [owlDateTime]="dt12"
+                
+                 [selectMode]="'rangeFrom'">
+          <owl-date-time #dt12></owl-date-time>
+      </label>
+        <div class="mb-3">
           <label for="fin">Fin location</label>
           <div class="input-group">
             <div class="input-group-prepend">
