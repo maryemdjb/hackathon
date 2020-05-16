@@ -17,9 +17,9 @@ export class RegisterService {
   authUrl = 'http://localhost:8080/api/auth/signup';
 
   constructor(private http: HttpClient, public router: Router) { }
-  registerForm(username, password, cin,phone,email): Observable<string> {
+  registerForm(username, password, cin, phone, email): Observable<string> {
     return this.http
-      .post<string>(this.authUrl, {username, email,password,cin,phone}, {
+      .post<string>(this.authUrl, {username, email, password, cin, phone}, {
         headers: new HttpHeaders(),
         observe: 'response'
       } )
