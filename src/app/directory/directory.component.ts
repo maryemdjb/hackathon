@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Article, DirectoryService} from './directory.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-directory',
@@ -8,7 +9,8 @@ import {Article, DirectoryService} from './directory.service';
 })
 export class DirectoryComponent implements OnInit {
 private listBikes: Article[];
-  constructor(private directory: DirectoryService) {
+  constructor(private directory: DirectoryService,
+              private router: Router) {
   }
 
   ngOnInit() {
@@ -21,4 +23,7 @@ private listBikes: Article[];
       this.listBikes = data;
     });
   }
+
+  reserver() {
+    this.router.navigate(['/reservation']);  }
 }

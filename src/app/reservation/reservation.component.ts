@@ -28,7 +28,7 @@ isLinear = false;
   }
 
 
-  reserve() {
+/*  reserve() {
     console.log("coucouuuuuuuuuuuuuuu");
     console.log(
     String(this.model.debut));
@@ -46,9 +46,9 @@ isLinear = false;
         console.error(error);
       });
      this.sendEmail()
-  }
+  }*/
 
-  async sendEmail() {
+/*  async sendEmail() {
     let receiver ='kiki';
     let nom ='kawther';
     let mail ='kawther.bjaoui@gmail.com'
@@ -60,5 +60,5 @@ isLinear = false;
     } catch (error) {
       console.log(error);
     }
-  }
+  }*/
 }
