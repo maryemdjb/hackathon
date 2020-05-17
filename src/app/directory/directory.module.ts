@@ -6,16 +6,35 @@ import {DirectoryComponent} from './directory.component';
 import {HomeModule} from '../home/home.module';
 import {DirectoryService} from './directory.service';
 import {HttpClientModule} from '@angular/common/http';
-
+import {MatDialogModule} from '@angular/material/dialog';
+import {OwlDateTimeModule, OwlNativeDateTimeModule} from 'ng-pick-datetime';
+import {MatStepperModule} from '@angular/material/stepper';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatButtonModule} from '@angular/material';
+import { ModalComponent } from './modal/modal.component';
+;
 
 @NgModule({
-  declarations: [DirectoryComponent],
+  declarations: [DirectoryComponent, ModalComponent],
   imports: [
     CommonModule,
     DirectoryRoutingModule,
     HomeModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule,
+    OwlDateTimeModule,
+    OwlNativeDateTimeModule,
+    MatStepperModule,
+    MatFormFieldModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    MatButtonModule,
+
   ],
-  providers: [DirectoryService]
+  providers: [DirectoryService],
+  entryComponents: [ModalComponent]
+
 })
 export class DirectoryModule { }

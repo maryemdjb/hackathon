@@ -1,0 +1,40 @@
+/* Make the modal a three-row grid */
+#modal-content-wrapper {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(1fr, 3);
+
+}
+
+#modal-title {
+  font-size: 22px;
+}
+
+#modal-footer {
+  justify-self: right;
+  align-self: center;
+}
+
+#modal-action-button {
+  margin-right: 30px;
+  background-color:#fab700;
+}
+
+#modal-cancel-button {
+  background-color: #4e4e4e;
+}
+.mat-container {
+  display: block;
+  padding: 24px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  overflow: auto;
+  outline: 0;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  max-height: inherit;
+  background-color: white;
+
+}

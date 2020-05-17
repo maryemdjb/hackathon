@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {Article, DirectoryService} from './directory.service';
 import {Router} from '@angular/router';
+import {MatDialog, MatDialogConfig} from '@angular/material';
+import {ReservationComponent} from '../reservation/reservation.component';
+import {ModalComponent} from './modal/modal.component';
 
 @Component({
   selector: 'app-directory',
@@ -8,13 +11,15 @@ import {Router} from '@angular/router';
   styleUrls: ['./directory.component.scss']
 })
 export class DirectoryComponent implements OnInit {
-private listBikes: Article[];
+  private listBikes: Article[];
+
   constructor(private directory: DirectoryService,
-              private router: Router) {
+              private router: Router,
+              public matDialog: MatDialog) {
   }
 
   ngOnInit() {
-    this.getBikes();
+    //   this.getBikes();
   }
 
   getBikes() {
@@ -25,5 +30,12 @@ private listBikes: Article[];
   }
 
   reserver() {
-    this.router.navigate(['/reservation']);  }
+    const dialogConfig = new MatDialogConfig();
+    // The user can't close the dialog by clicking outside its body
+    dialogConfig.disableClose = true;
+    dialogConfig.id = 'modal-component';
+    dialogConfig.height = '350px';
+    dialogConfig.width = '600px';
+    const modalDialog = this.matDialog.open(ModalComponent, dialogConfig);
+  }
 }

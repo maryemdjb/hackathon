@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormBuilder} from '@angular/forms';
 import {Router} from '@angular/router';
 import {ReservationService} from './reservation.service';
+import {MatDialog, MatDialogConfig, MatDialogRef} from '@angular/material';
 
 
 @Component({
@@ -20,44 +21,42 @@ export class ReservationComponent implements OnInit {
   endDate: any;
 
   constructor(
-              private formBuilder: FormBuilder,
-              private reservationService: ReservationService,
-              private router: Router) {
+    private reservationService: ReservationService,
+    private router: Router) {
   }
 
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
 
 
   reserve() {
-    console.log("coucouuuuuuuuuuuuuuu");
+    console.log('coucouuuuuuuuuuuuuuu');
     console.log(
-    String(this.model.debut));
-    this.reservationService.reserveForm(String(this.model.debut), String(this.model.fin), 1,1)
+      String(this.model.debut));
+    this.reservationService.reserveForm(String(this.model.debut), String(this.model.fin), 1, 1)
       .subscribe(response => {
-        console.log("hhhhhhhhhh");
+        console.log('hhhhhhhhhh');
 
-          alert("Votre inscription est effectuée avec succès")
+        alert('Votre inscription est effectuée avec succès');
 
 
-           this.router.navigate(['/home']);
-            // console.log(this.model.username, this.model.password);
+        this.router.navigate(['/home']);
+        // console.log(this.model.username, this.model.password);
 
       }, error => {
         console.error(error);
       });
-     this.sendEmail()
+    this.sendEmail();
   }
 
- sendEmail() {
-    let receiver ='kiki';
-    let nom ='kawther';
-    let mail ='kawther.bjaoui@gmail.com'
+  sendEmail() {
+    let receiver = 'kiki';
+    let nom = 'kawther';
+    let mail = 'kawther.bjaoui@gmail.com';
 
     try {
-      const data =  this.reservationService.notifEmail(receiver,nom,mail).subscribe(res=>{console.log("final");
-      })
+      const data = this.reservationService.notifEmail(receiver, nom, mail).subscribe(res => {
+        console.log('final');
+      });
       // Since sendEmail again returns a Promise, I can await it.
       console.log(data);
     } catch (error) {
