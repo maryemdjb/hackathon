@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { DirectoryRoutingModule } from './directory-routing.module';
 import {DirectoryComponent} from './directory.component';
 import {HomeModule} from '../home/home.module';
+import {DirectoryService} from './directory.service';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -11,7 +13,9 @@ import {HomeModule} from '../home/home.module';
   imports: [
     CommonModule,
     DirectoryRoutingModule,
-    HomeModule
-  ]
+    HomeModule,
+    HttpClientModule
+  ],
+  providers: [DirectoryService]
 })
 export class DirectoryModule { }
