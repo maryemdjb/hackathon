@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormBuilder} from '@angular/forms';
 import {Router} from '@angular/router';
 import {ReservationService} from './reservation.service';
@@ -14,14 +14,16 @@ export class ReservationComponent implements OnInit {
   public selectedMoments = [
     new Date(2018, 1, 12, 10, 30),
     new Date(2018, 3, 21, 20, 30)
-];
-isLinear = false;
+  ];
+  isLinear = false;
   startDate: any;
   endDate: any;
 
-  constructor(private _formBuilder: FormBuilder,
-              private reservationService : ReservationService,
-              private router : Router ) { }
+  constructor(
+              private formBuilder: FormBuilder,
+              private reservationService: ReservationService,
+              private router: Router) {
+  }
 
   ngOnInit() {
 
@@ -36,11 +38,11 @@ isLinear = false;
       .subscribe(response => {
         console.log("hhhhhhhhhh");
 
-        alert("Votre inscription est effectuée avec succès")
+          alert("Votre inscription est effectuée avec succès")
 
 
-         this.router.navigate(['/home']);
-          // console.log(this.model.username, this.model.password);
+           this.router.navigate(['/home']);
+            // console.log(this.model.username, this.model.password);
 
       }, error => {
         console.error(error);
