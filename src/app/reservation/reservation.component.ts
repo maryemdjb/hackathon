@@ -42,20 +42,24 @@ isLinear = false;
       }, error => {
         console.error(error);
       });
-     this.sendEmail()
+      let receiver ='kiki';
+         let nom ='kawther';
+      let mail ='kawther.bjaoui@gmail.com'
+     //this.sendEmail();
+      
   }
 
-  async sendEmail() {
-    let receiver ='kiki';
-    let nom ='kawther';
-    let mail ='kawther.bjaoui@gmail.com'
+  // async sendEmail() {
+  //   let receiver ='kiki';
+  //   let nom ='kawther';
+  //   let mail ='kawther.bjaoui@gmail.com'
    
-    try {
-      const data = await this.reservationService.notifEmail(receiver,nom,mail);
-      // Since sendEmail again returns a Promise, I can await it.
-      console.log(data);
-    } catch (error) {
-      console.log(error);
-    }
-  }
+  //   try {
+  //     const data = await this.reservationService.notifEmail(receiver,nom,mail);
+  //     // Since sendEmail again returns a Promise, I can await it.
+  //     console.log(data);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }
 }
