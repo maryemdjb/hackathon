@@ -1,17 +1,18 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
 
-import { ReservationRoutingModule } from './reservation-routing.module';
+import {ReservationRoutingModule} from './reservation-routing.module';
 import {ReservationComponent} from './reservation.component';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-
+import {CalendarModule} from 'primeng';
 import {HttpClientModule} from '@angular/common/http';
 import {ReservationService} from './reservation.service';
 
-import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+import {OwlDateTimeModule, OwlNativeDateTimeModule} from 'ng-pick-datetime';
+
 
 @NgModule({
   declarations: [ReservationComponent],
@@ -23,10 +24,14 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
     MatStepperModule,
     MatFormFieldModule,
     FormsModule,
-     ReactiveFormsModule,
-     HttpClientModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    CalendarModule
+
+
   ],
-  providers: [ReservationService ]
+  providers: [ReservationService]
 
 })
-export class ReservationModule { }
+export class ReservationModule {
+}

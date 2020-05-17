@@ -1,39 +1,30 @@
 <p>modal <i data-toggle="modal" data-target="#exampleModalLong" class="fa fa-edit" style="font-size:20px; color:grey"></i></p>
-<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-      
-        <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Réservation</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>  
-        <div class="modal-body">
-         <form #form="ngForm"  (ngSubmit)="reserve()"  >
 
-            <label for="debut">Date début</label> <br/>
-            <input id="debut" name='debut' [owlDateTimeTrigger]="dt5" [owlDateTime]="dt5"
-            [selectMode]="'rangeFrom'"   [(ngModel)]="model.debut">
-            <owl-date-time #dt5></owl-date-time><br/>
 
-            <label for="fin">Date fin</label> <br/>
-            <input name='fin' id="fin" [owlDateTimeTrigger]="dt12" [owlDateTime]="dt12"   
-            [selectMode]="'rangeFrom'"  [(ngModel)]="model.fin">
-            <owl-date-time #dt12></owl-date-time><br/>  
-            <button type="submit"   class="btn btn-secondary">Ajouter une catégorie</button>
-
-          </form> 
-        
-          
+        <div class="col-lg-5  col-md-6 header-right">
+          <h4 class="text-white pb-30">Votre Vélo en Un Click!</h4>
+          <form class="form" role="form" autocomplete="off">
+            <br>
+            <div class="from-group">
+              <div class="input-group dates-wrap">
+                <input class="form-control" [owlDateTimeTrigger]="dt10" [owlDateTime]="dt10"
+                       [selectMode]="'range'" placeholder="Saisir la durée de location" required>
+                <owl-date-time #dt10></owl-date-time>
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><span class="lnr lnr-calendar-full"></span></span>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="form-group row">
+              <div class="col-md-12">
+                <button type="reset" class="btn btn-default btn-lg btn-block text-center text-uppercase">Rechercher
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
 
-        
-        <!-- <div class="modal-footer">
-          <button type="button"  (ngSubmit)="reserve()" class="btn btn-secondary">Ajouter une catégorie</button>
-          <button type="button"  class="btn btn-primary">Valider</button>
-        </div> -->
-      </div>
-    </div>
-  </div>
- 
+<div>
+
+

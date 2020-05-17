@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {FormBuilder} from '@angular/forms';
 import {Router} from '@angular/router';
 import {ReservationService} from './reservation.service';
-import { getMaxListeners } from 'cluster';
 
 
 @Component({
@@ -17,11 +16,15 @@ export class ReservationComponent implements OnInit {
     new Date(2018, 3, 21, 20, 30)
 ];
 isLinear = false;
+  startDate: any;
+  endDate: any;
 
-  constructor(private _formBuilder: FormBuilder, private reservationService :ReservationService, private router :Router ) { }
+  constructor(private _formBuilder: FormBuilder,
+              private reservationService : ReservationService,
+              private router : Router ) { }
 
   ngOnInit() {
-  
+
   }
 
 
@@ -32,13 +35,13 @@ isLinear = false;
     this.reservationService.reserveForm(String(this.model.debut), String(this.model.fin), 1,1)
       .subscribe(response => {
         console.log("hhhhhhhhhh");
-        
+
         alert("Votre inscription est effectuée avec succès")
-       
-          
+
+
          this.router.navigate(['/home']);
           // console.log(this.model.username, this.model.password);
-        
+
       }, error => {
         console.error(error);
       });
@@ -49,7 +52,7 @@ isLinear = false;
     let receiver ='kiki';
     let nom ='kawther';
     let mail ='kawther.bjaoui@gmail.com'
-   
+
     try {
       const data = await this.reservationService.notifEmail(receiver,nom,mail);
       // Since sendEmail again returns a Promise, I can await it.
