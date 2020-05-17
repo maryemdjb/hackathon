@@ -5,7 +5,6 @@ import { HomeRoutingModule } from './home-routing.module';
 import {HomeComponent} from './home.component';
 import {HeaderComponent} from '../shared/header/header.component';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
-import {CalendarModule, FullCalendarModule} from 'primeng';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 

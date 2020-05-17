@@ -7,10 +7,10 @@ import {ReservationComponent} from './reservation.component';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {CalendarModule} from 'primeng';
+//import {CalendarModule} from 'primeng';
 import {HttpClientModule} from '@angular/common/http';
 import {ReservationService} from './reservation.service';
-import {NgbModalModule} from '@ng-bootstrap/ng-bootstrap';
+//import {NgbModalModule} from '@ng-bootstrap/ng-bootstrap';
 
 import {OwlDateTimeModule, OwlNativeDateTimeModule} from 'ng-pick-datetime';
 
@@ -27,7 +27,7 @@ import {OwlDateTimeModule, OwlNativeDateTimeModule} from 'ng-pick-datetime';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    CalendarModule,
+   // CalendarModule,
 
 
 
