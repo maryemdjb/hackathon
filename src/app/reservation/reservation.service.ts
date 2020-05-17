@@ -27,4 +27,12 @@ export class ReservationService {
         })
       );
   }
+  async notifEmail(receiver, nom, email_user){
+    return this.http
+    .post('http://localhost:8080/sendEmail', {receiver, nom, email_user}, {
+      headers: new HttpHeaders(),
+      observe: 'response'
+    })
+    
+  }
 }
