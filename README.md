@@ -1,27 +1,54 @@
-# Frontend
+# Ready Wheels
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.25.
+Une nouvelle façon de circuler - Assurer le transport des citoyens qui veulent circuler en évitant la foule dans un context Covid-19 en proposant un prêt de vélos entre particuliers.
 
-## Development server
+## Fonctionnalités
+1. S'inscrire et se connecter en utilisant JSON Web Token (**JWT**)
+2. Avoir accès à un annuaire de vélos
+3. Déposer son vélo tout en précisant ses caractéristiques (marque, prix, état, photo, etc)
+4. Louer un vélo en indiquant la date de début et de fin de sa réservation
+5. Notifier le propriétaire du vélo par un E-mail
+6. Service de paiement via Stripe (prêt en Backend) 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+**Fonctionnalités à venir :**
 
-## Code scaffolding
+1. S'il y a un dépassement de la durée de réservation, l'utilisateur sera pénalisé (frais de paiement)
+2. Notification par SMS
+3. Intégration de l'API Google Maps
+4. Rating
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Guide de Démarrage
 
-## Build
+Ces instructions vous permettront d'obtenir une copie du projet sur votre ordinateur à des fins de test. Il faut installer :
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+* PostgreSQL
+* Sprign Boot
+* Angular CLI
 
-## Running unit tests
+### Usage Back-end
+Il faut avoir une base de données **rentbike** et modifier, par suite, ces coordonnées dans le fichier **application.properties**:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+spring.datasource.username=username
+spring.datasource.password=password
+```
+### Usage Front-end
+Il faut ouvrir une fenêtre de terminal / console et entrer les commandes suivantes:
 
-## Running end-to-end tests
+```bash
+cd PATH_TO_ProjectDirectory
+npm install
+ng serve
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Tester l'application
+Ouvrez votre navigateur sur http://localhost:4200/
 
-## Further help
+## Les membres de l'équipe
+* Kawther Bjaoui
+* Cyrine Ben Othmen
+* Maryem Djebbi
+* Youssef Gouicem Lakhal
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+##
+Copyright © All rights reserved | Made by Bug Busters
