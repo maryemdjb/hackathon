@@ -28,7 +28,7 @@ isLinear = false;
   }
 
 
-/*  reserve() {
+  reserve() {
     console.log("coucouuuuuuuuuuuuuuu");
     console.log(
     String(this.model.debut));
@@ -46,19 +46,20 @@ isLinear = false;
         console.error(error);
       });
      this.sendEmail()
-  }*/
+  }
 
-/*  async sendEmail() {
+ sendEmail() {
     let receiver ='kiki';
     let nom ='kawther';
     let mail ='kawther.bjaoui@gmail.com'
 
     try {
-      const data = await this.reservationService.notifEmail(receiver,nom,mail);
+      const data =  this.reservationService.notifEmail(receiver,nom,mail).subscribe(res=>{console.log("final");
+      })
       // Since sendEmail again returns a Promise, I can await it.
       console.log(data);
     } catch (error) {
       console.log(error);
     }
-  }*/
+  }
 }
