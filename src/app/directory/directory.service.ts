@@ -12,7 +12,7 @@ export interface Article {
   providedIn: 'root'
 })
 export class DirectoryService {
-  private allBikes = 'http://bb95fd43.ngrok.io/article/all';
+  private allBikes = 'http://localhost:8080/article/all';
 
   constructor(private http: HttpClient) { }
 

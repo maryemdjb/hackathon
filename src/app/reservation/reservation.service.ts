@@ -11,28 +11,20 @@ export class ReservationService {
   authUrl = 'http://localhost:8080/reservation/dores';
 
   constructor(private http: HttpClient, public router: Router) { }
-  reserveForm(debut, fin, id_client, id_article): Observable<string> {
+  reserveForm(debut, fin, id_client, id_article): Observable<any> {
     return this.http
-      .post<string>(this.authUrl, {id_article, id_client, debut, fin}, {
+      .post(this.authUrl, {id_article, id_client, debut, fin}, {
         headers: new HttpHeaders(),
         observe: 'response'
       } )
-      .pipe(
-        share(), // <========== YOU HAVE TO SHARE THIS OBSERVABLE TO AVOID MULTIPLE REQUEST BEING SENT SIMULTANEOUSLY
-        map(res => {
-          console.log(res);
-         
-         // localStorage.setItem('token', token);
-          return res.body;
-        })
-      );
+      
   }
-  async notifEmail(receiver, nom, email_user){
-    return this.http
-    .post('http://localhost:8080/sendEmail', {receiver, nom, email_user}, {
-      headers: new HttpHeaders(),
-      observe: 'response'
-    })
+  // notifEmail(receiver, nom, email_user){
+  //   return this.http
+  //   .post('http://localhost:8080/sendEmail', {receiver, nom, email_user}, {
+  //     headers: new HttpHeaders(),
+  //     observe: 'response'
+  //   }).toPromise
     
-  }
+  // }
 }

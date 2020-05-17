@@ -50,14 +50,15 @@
       </div><!-- /.col-lg-4 -->
 
     </div><!-- /.row -->
+  <div class="center">
   <div class="row">
-    <div class="col-md-12 order-md-1">
-      <h2 class="text-center" style="margin: 10px;">Inscrivez votre vélo</h2>
-      <form class="needs-validation" novalidate>
+    <div class="col-md-16 order-md-1">
+      <h2 class="text-center" style="margin: 10px;">Inscrivez votre article</h2>
+      <form (ngSubmit)="add()" class="needs-validation" novalidate>
         <div class="row">
           <div class="col-md-12 mb-3">
-            <label for="firstName">Description</label>
-            <input type="textbox" class="form-control" id="firstName" placeholder="" value="" required>
+            <label for="firstName">Nom</label>
+            <input  class="form-control" id="firstName" name="nom " [(ngModel)]="model.nom" placeholder="" value="" required>
             <div class="invalid-feedback">
               Valid Description is required.
             </div>
@@ -70,7 +71,7 @@
             <div class="input-group-prepend">
               <span class="input-group-text"><span class="lnr lnr-map-marker"></span></span>
             </div>
-            <input type="text" class="form-control" id="adresse" placeholder="Adresse" required>
+            <input type="text" class="form-control"name="adr "  [(ngModel)]="model.location" id="adresse" placeholder="Adresse" required>
             <div class="invalid-feedback" style="width: 100%;">
               Your adresse is required.
             </div>
@@ -83,7 +84,7 @@
             <div class="input-group-prepend">
               <span class="input-group-text"><span class="lnr lnr-calendar-full"></span></span>
             </div>
-            <input class="form-control" [owlDateTimeTrigger]="dt10" [owlDateTime]="dt10"
+            <input class="form-control" name="loc " [owlDateTimeTrigger]="dt10" [owlDateTime]="dt10"
             [selectMode]="'range'" required>
             <owl-date-time #dt10></owl-date-time>
             <div class="invalid-feedback" style="width: 100%;">
@@ -97,7 +98,7 @@
         <div class="row">
           <div class="col-md-3 mb-3">
             <label for="country">Marque</label>
-            <select class="custom-select d-block w-100" id="country" required>
+            <select class="custom-select d-block w-100" name="marque " [(ngModel)]="model.marque" id="country" required>
               <option value="">Choose...</option>
               <option>Merida Bikes</option>
               <option>Kona Bicycles</option>
@@ -116,7 +117,7 @@
           </div>
           <div class="col-md-4 mb-3">
             <label for="state">etat</label>
-            <select class="custom-select d-block w-100" id="state" required>
+            <select class="custom-select d-block w-100"name="etat "  [(ngModel)]="model.etat" id="state" required>
               <option>vieux</option>
               <option>usé</option>
               <option>nouveau</option>
@@ -129,7 +130,8 @@
         <hr class="mb-4">
         <div class="form-group">
           <label for="exampleFormControlFile1">Photos:</label>
-          <input type="file" class="form-control-file" id="exampleFormControlFile1">
+          <input type="file" class="form-control-file" id="exampleFormControlFile1"
+          (change)="handleFileInput($event.target.files)">
         </div>
         <hr class="mb-4">
         <button class="btn btn-primary btn-lg btn-block text-center text-uppercase" type="submit">Continue to checkout</button>
@@ -137,6 +139,7 @@
       </form>
     </div>
   </div>
+</div>  
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
