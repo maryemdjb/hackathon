@@ -15,7 +15,7 @@ export class User {
   providedIn: 'root'
 })
 export class LoginService {
-  authUrl = 'localhost:8080/api/auth/signin';
+  authUrl = 'http://localhost:8080/api/auth/signin';
 
   constructor(private http: HttpClient, public router: Router) {
   }
